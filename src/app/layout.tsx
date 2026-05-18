@@ -18,8 +18,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Next.js Boilerplate",
-  description: "Production-ready Next.js boilerplate with TypeScript, Tailwind CSS, and Radix UI",
+  title: "EXPOSTORE - Productos Premium de Alta Gama",
+  description: "Tienda de e-commerce de productos premium: iPhones, perfumes importados, Karssell, electrodomésticos. Envíos rápidos en Lanús. Garantía de originalidad.",
+  keywords: ["EXPOSTORE", "iPhone", "perfumes", "Karssell", "Lanús", "productos premium"],
 };
 
 export default function RootLayout({
@@ -28,18 +29,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="es" suppressHydrationWarning className="dark">
       <head>
-
+        <meta name="theme-color" content="#0a0a0a" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
       >
         <QueryProvider>
           <ThemeProvider
             attribute="class"
-            defaultTheme="light"
-            enableSystem
+            defaultTheme="dark"
+            enableSystem={false}
             disableTransitionOnChange
           >
             <TooltipProvider>
