@@ -127,3 +127,103 @@
     @apply rounded-full bg-muted hover:bg-muted-foreground;
   }
 }
+
+/* Metallic Gradient Collection - EXPOSTORE Premium Aesthetics */
+@layer components {
+  /* Gold/Dorado Gradients */
+  .gradient-gold-bright {
+    background: linear-gradient(135deg, #FFD700 0%, #FFC700 50%, #DAA520 100%);
+  }
+
+  .gradient-gold-shine {
+    background: linear-gradient(45deg, #FFE135 0%, #FFD700 50%, #C9A000 100%);
+  }
+
+  .gradient-gold-matte {
+    background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
+  }
+
+  .gradient-gold-warm {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  }
+
+  /* Silver/Plata Gradients */
+  .gradient-silver-shine {
+    background: linear-gradient(45deg, #FFFFFF 0%, #E8E8E8 50%, #C0C0C0 100%);
+  }
+
+  .gradient-silver-matte {
+    background: linear-gradient(135deg, #E0E0E0 0%, #A9A9A9 100%);
+  }
+
+  .gradient-silver-light {
+    background: linear-gradient(135deg, #F5F5F5 0%, #D3D3D3 100%);
+  }
+
+  .gradient-silver-cool {
+    background: linear-gradient(45deg, #F0F8FF 0%, #D3D3D3 100%);
+  }
+
+  /* Steel/Acero Gradients */
+  .gradient-steel-dark {
+    background: linear-gradient(135deg, #606060 0%, #3D3D3D 100%);
+  }
+
+  .gradient-steel-light {
+    background: linear-gradient(135deg, #808080 0%, #505050 100%);
+  }
+
+  .gradient-steel-shine {
+    background: linear-gradient(45deg, #A9A9A9 0%, #696969 50%, #404040 100%);
+  }
+
+  .gradient-steel-cool {
+    background: linear-gradient(135deg, #778899 0%, #483D8B 100%);
+  }
+
+  /* Premium Mixed Gradients */
+  .gradient-gold-silver {
+    background: linear-gradient(135deg, #FFD700 0%, #E0E0E0 100%);
+  }
+
+  .gradient-silver-steel {
+    background: linear-gradient(135deg, #E8E8E8 0%, #606060 100%);
+  }
+
+  .gradient-gold-accent {
+    background: linear-gradient(135deg, #FFD700 0%, #25D366 100%);
+  }
+
+  .gradient-premium-luxury {
+    background: linear-gradient(135deg, #D4AF37 0%, #F5F5F5 50%, #606060 100%);
+  }
+
+  .gradient-modern-shine {
+    background: linear-gradient(45deg, #FFD700 0%, #FFFFFF 50%, #C0C0C0 100%);
+  }
+
+  /* Gradient borders using pseudo-elements */
+  .border-gradient-gold {
+    position: relative;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    background-image: linear-gradient(#0a0a0a, #0a0a0a), linear-gradient(135deg, #FFD700, #DAA520);
+    background-origin: padding-box, border-box;
+  }
+
+  .border-gradient-silver {
+    position: relative;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    background-image: linear-gradient(#0a0a0a, #0a0a0a), linear-gradient(135deg, #E0E0E0, #A9A9A9);
+    background-origin: padding-box, border-box;
+  }
+
+  .border-gradient-steel {
+    position: relative;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    background-image: linear-gradient(#0a0a0a, #0a0a0a), linear-gradient(135deg, #A9A9A9, #606060);
+    background-origin: padding-box, border-box;
+  }
+}

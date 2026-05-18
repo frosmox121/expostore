@@ -11,7 +11,7 @@ interface CategoryCardProps {
 export function CategoryCard({ category }: CategoryCardProps) {
   return (
     <Link href={`/category/${category.id}`}>
-      <div className={`group relative h-64 rounded-2xl overflow-hidden bg-gradient-to-br ${category.color} border border-border hover:border-primary/50 transition-all duration-300 cursor-pointer hover:shadow-lg hover:shadow-primary/20`}>
+      <div className={`group relative h-64 rounded-2xl overflow-hidden bg-gradient-to-br ${category.color} border-2 border-transparent transition-all duration-300 cursor-pointer hover:shadow-xl hover:shadow-primary/30`} style={{backgroundImage: `linear-gradient(#0a0a0a, #0a0a0a), linear-gradient(135deg, #FFD700, #DAA520)`, backgroundOrigin: 'padding-box, border-box'}}>
         {/* Background Image */}
         <div className="absolute inset-0 opacity-70 group-hover:opacity-100 transition-opacity">
           <Image

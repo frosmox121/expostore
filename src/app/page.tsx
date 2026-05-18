@@ -32,30 +32,38 @@ export default function Home() {
 
               {/* Trust Badges */}
               <div className="grid grid-cols-2 gap-4">
-                <div className="flex items-start gap-3 bg-card border border-border rounded-xl p-4">
-                  <Shield className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                  <div>
+                <div className="relative flex items-start gap-3 bg-card border-2 border-transparent rounded-xl p-4 hover:shadow-lg hover:shadow-yellow-500/20 transition-all group">
+                  <div className="absolute inset-0 rounded-xl gradient-gold-shine opacity-0 group-hover:opacity-5 transition-opacity" />
+                  <div className="absolute inset-0 rounded-xl border-2 border-transparent bg-clip-padding" style={{backgroundImage: 'linear-gradient(#121212, #121212), linear-gradient(135deg, #FFD700, #DAA520)', backgroundOrigin: 'padding-box, border-box'}} />
+                  <Shield className="h-6 w-6 text-primary flex-shrink-0 mt-1 relative z-10" />
+                  <div className="relative z-10">
                     <p className="font-semibold text-sm">100% Original</p>
                     <p className="text-xs text-secondary">Caja sellada de fábrica</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3 bg-card border border-border rounded-xl p-4">
-                  <Truck className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                  <div>
+                <div className="relative flex items-start gap-3 bg-card border-2 border-transparent rounded-xl p-4 hover:shadow-lg hover:shadow-blue-400/20 transition-all group">
+                  <div className="absolute inset-0 rounded-xl gradient-silver-cool opacity-0 group-hover:opacity-5 transition-opacity" />
+                  <div className="absolute inset-0 rounded-xl border-2 border-transparent bg-clip-padding" style={{backgroundImage: 'linear-gradient(#121212, #121212), linear-gradient(135deg, #E0E0E0, #A9A9A9)', backgroundOrigin: 'padding-box, border-box'}} />
+                  <Truck className="h-6 w-6 text-primary flex-shrink-0 mt-1 relative z-10" />
+                  <div className="relative z-10">
                     <p className="font-semibold text-sm">Envío Rápido</p>
                     <p className="text-xs text-secondary">Mismo día en Lanús</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3 bg-card border border-border rounded-xl p-4">
-                  <Zap className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                  <div>
+                <div className="relative flex items-start gap-3 bg-card border-2 border-transparent rounded-xl p-4 hover:shadow-lg hover:shadow-green-400/20 transition-all group">
+                  <div className="absolute inset-0 rounded-xl gradient-gold-warm opacity-0 group-hover:opacity-5 transition-opacity" />
+                  <div className="absolute inset-0 rounded-xl border-2 border-transparent bg-clip-padding" style={{backgroundImage: 'linear-gradient(#121212, #121212), linear-gradient(135deg, #FFD700, #FFA500)', backgroundOrigin: 'padding-box, border-box'}} />
+                  <Zap className="h-6 w-6 text-primary flex-shrink-0 mt-1 relative z-10" />
+                  <div className="relative z-10">
                     <p className="font-semibold text-sm">Atención Personalizada</p>
                     <p className="text-xs text-secondary">WhatsApp + Instagram</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3 bg-card border border-border rounded-xl p-4">
-                  <Shield className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                  <div>
+                <div className="relative flex items-start gap-3 bg-card border-2 border-transparent rounded-xl p-4 hover:shadow-lg hover:shadow-gray-400/20 transition-all group">
+                  <div className="absolute inset-0 rounded-xl gradient-steel-light opacity-0 group-hover:opacity-5 transition-opacity" />
+                  <div className="absolute inset-0 rounded-xl border-2 border-transparent bg-clip-padding" style={{backgroundImage: 'linear-gradient(#121212, #121212), linear-gradient(135deg, #A9A9A9, #606060)', backgroundOrigin: 'padding-box, border-box'}} />
+                  <Shield className="h-6 w-6 text-primary flex-shrink-0 mt-1 relative z-10" />
+                  <div className="relative z-10">
                     <p className="font-semibold text-sm">Garantía Oficial</p>
                     <p className="text-xs text-secondary">Apple, Marcas Premium</p>
                   </div>
@@ -68,15 +76,16 @@ export default function Home() {
                   href="https://wa.me/541234567890?text=Hola%20EXPOSTORE%2C%20consultando%20--%20EXPOSTORE"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-accent text-accent-foreground px-8 py-4 rounded-lg font-bold text-center hover:opacity-90 transition-all hover:shadow-lg hover:shadow-accent/20"
+                  className="gradient-gold-shine text-foreground px-8 py-4 rounded-lg font-bold text-center hover:shadow-xl hover:shadow-yellow-500/30 transition-all transform hover:scale-105"
                 >
                   💬 Contactar por WhatsApp
                 </a>
                 <a
                   href="#catalogo"
-                  className="border-2 border-primary text-primary px-8 py-4 rounded-lg font-bold text-center hover:bg-primary/10 transition-all"
+                  className="border-2 border-primary text-primary px-8 py-4 rounded-lg font-bold text-center hover:bg-primary/10 transition-all relative group"
                 >
-                  Ver Catálogo
+                  <span className="relative z-10">Ver Catálogo</span>
+                  <div className="absolute inset-0 rounded-lg gradient-silver-matte opacity-0 group-hover:opacity-20 transition-opacity" />
                 </a>
               </div>
             </div>
@@ -145,7 +154,7 @@ export default function Home() {
           <div className="flex justify-center mt-12">
             <a
               href="/catalogo"
-              className="bg-primary text-primary-foreground px-8 py-4 rounded-lg font-bold hover:opacity-90 transition-all hover:shadow-lg hover:shadow-primary/20 inline-flex items-center gap-2"
+              className="gradient-gold-shine text-foreground px-8 py-4 rounded-lg font-bold hover:shadow-xl hover:shadow-yellow-500/40 transition-all inline-flex items-center gap-2 transform hover:scale-105"
             >
               Ver Todo el Catálogo →
             </a>
@@ -167,10 +176,15 @@ export default function Home() {
 
           {/* Community Posts Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {communityProof.map((post) => (
+            {communityProof.map((post, idx) => (
               <div
                 key={post.id}
-                className="bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/50 transition-all hover:shadow-lg"
+                className="relative bg-card border-2 border-transparent rounded-2xl overflow-hidden hover:shadow-xl transition-all group"
+                style={{
+                  borderImage: idx % 3 === 0 ? 'linear-gradient(135deg, #FFD700, #DAA520) 1' :
+                               idx % 3 === 1 ? 'linear-gradient(135deg, #E0E0E0, #A9A9A9) 1' :
+                               'linear-gradient(135deg, #A9A9A9, #606060) 1'
+                }}
               >
                 {/* Image */}
                 <div className="relative h-64 overflow-hidden">
@@ -178,12 +192,13 @@ export default function Home() {
                     src={post.image}
                     alt={post.username}
                     fill
-                    className="object-cover"
+                    className="object-cover group-hover:scale-110 transition-transform duration-300"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
 
                 {/* Content */}
-                <div className="p-4">
+                <div className="p-4 relative z-10">
                   <p className="font-bold text-foreground mb-2">{post.username}</p>
                   <p className="text-secondary text-sm">{post.comment}</p>
                 </div>
@@ -197,7 +212,7 @@ export default function Home() {
               href="https://instagram.com/direct/t/expostorelanus"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition"
+              className="gradient-gold-matte text-foreground px-6 py-3 rounded-lg font-semibold hover:shadow-xl hover:shadow-yellow-600/30 transition-all inline-flex items-center gap-2"
             >
               📸 Síguenos en Instagram @expostorelanus
             </a>
@@ -219,18 +234,25 @@ export default function Home() {
 
           {/* FAQ Accordion */}
           <div className="space-y-4">
-            {faqItems.map((item) => (
+            {faqItems.map((item, idx) => (
               <details
                 key={item.id}
-                className="group bg-card border border-border rounded-xl hover:border-primary/50 transition cursor-pointer"
+                className="group bg-card border-2 border-transparent rounded-xl hover:shadow-lg transition cursor-pointer"
+                style={{
+                  backgroundImage: 'linear-gradient(#121212, #121212), linear-gradient(135deg, ' +
+                                  (idx % 3 === 0 ? '#FFD700, #DAA520' :
+                                   idx % 3 === 1 ? '#E0E0E0, #A9A9A9' :
+                                   '#A9A9A9, #606060') + ')',
+                  backgroundOrigin: 'padding-box, border-box'
+                }}
               >
-                <summary className="flex items-center justify-between p-4 sm:p-6 font-semibold text-foreground hover:text-primary transition">
+                <summary className="flex items-center justify-between p-4 sm:p-6 font-semibold text-foreground hover:text-primary/80 transition relative z-10">
                   {item.question}
-                  <span className="inline-block group-open:rotate-180 transition">
+                  <span className="inline-block group-open:rotate-180 transition text-primary">
                     ▼
                   </span>
                 </summary>
-                <div className="px-4 sm:px-6 pb-4 sm:pb-6 text-secondary border-t border-border">
+                <div className="px-4 sm:px-6 pb-4 sm:pb-6 text-secondary border-t border-border/50 relative z-10">
                   {item.answer}
                 </div>
               </details>
@@ -238,19 +260,22 @@ export default function Home() {
           </div>
 
           {/* Contact Section */}
-          <div className="mt-12 bg-gradient-to-r from-primary/10 to-accent/10 border-2 border-primary/20 rounded-2xl p-6 sm:p-8 text-center space-y-4">
-            <h3 className="text-2xl font-bold">¿No encontraste tu respuesta?</h3>
-            <p className="text-secondary">
-              Nuestro equipo está disponible por WhatsApp e Instagram para ayudarte.
-            </p>
-            <a
-              href="https://wa.me/541234567890?text=Hola%20EXPOSTORE%2C%20tengo%20una%20consulta%20--%20EXPOSTORE"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-accent text-accent-foreground px-8 py-3 rounded-lg font-bold hover:opacity-90 transition"
-            >
-              💬 Contáctanos por WhatsApp
-            </a>
+          <div className="mt-12 relative border-2 border-transparent rounded-2xl p-6 sm:p-8 text-center space-y-4 group overflow-hidden" style={{backgroundImage: 'linear-gradient(#0a0a0a, #0a0a0a), linear-gradient(135deg, rgba(255,215,0,0.1), rgba(37,211,102,0.1))', backgroundOrigin: 'padding-box, border-box'}}>
+            <div className="absolute inset-0 gradient-gold-accent opacity-5 group-hover:opacity-10 transition-opacity rounded-2xl" />
+            <div className="relative z-10">
+              <h3 className="text-2xl font-bold">¿No encontraste tu respuesta?</h3>
+              <p className="text-secondary">
+                Nuestro equipo está disponible por WhatsApp e Instagram para ayudarte.
+              </p>
+              <a
+                href="https://wa.me/541234567890?text=Hola%20EXPOSTORE%2C%20tengo%20una%20consulta%20--%20EXPOSTORE"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block gradient-gold-shine text-foreground px-8 py-3 rounded-lg font-bold hover:shadow-lg hover:shadow-yellow-500/30 transition-all"
+              >
+                💬 Contáctanos por WhatsApp
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -323,7 +348,7 @@ export default function Home() {
               href="https://wa.me/541234567890?text=Hola%20EXPOSTORE%2C%20consultando%20--%20EXPOSTORE"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-accent text-accent-foreground px-8 py-4 rounded-lg font-bold text-center hover:opacity-90 transition-all hover:shadow-lg text-lg"
+              className="gradient-gold-shine text-foreground px-8 py-4 rounded-lg font-bold text-center hover:shadow-xl hover:shadow-yellow-500/40 transition-all text-lg transform hover:scale-105"
             >
               💬 Enviar mensaje por WhatsApp
             </a>
@@ -331,7 +356,7 @@ export default function Home() {
               href="https://instagram.com/direct/t/expostorelanus"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-pink-500/80 text-white px-8 py-4 rounded-lg font-bold text-center hover:opacity-90 transition-all hover:shadow-lg text-lg"
+              className="gradient-silver-cool text-foreground px-8 py-4 rounded-lg font-bold text-center hover:shadow-xl hover:shadow-blue-300/40 transition-all text-lg transform hover:scale-105"
             >
               📸 Instagram Direct
             </a>

@@ -16,7 +16,7 @@ export function ProductCard({ product }: ProductCardProps) {
 
   return (
     <Link href={`/product/${product.id}`}>
-      <div className="group relative bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+      <div className="group relative bg-card border-2 border-transparent rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl" style={{backgroundImage: 'linear-gradient(#121212, #121212), linear-gradient(135deg, #FFD700, #DAA520)', backgroundOrigin: 'padding-box, border-box'}}>
         {/* Image Container */}
         <div className="relative h-64 sm:h-72 overflow-hidden bg-background">
           <Image
@@ -28,7 +28,7 @@ export function ProductCard({ product }: ProductCardProps) {
 
           {/* Badge */}
           {product.badge && (
-            <div className="absolute top-3 right-3 bg-destructive text-destructive-foreground px-3 py-1 rounded-full text-sm font-bold">
+            <div className="absolute top-3 right-3 gradient-gold-bright text-foreground px-3 py-1 rounded-full text-sm font-bold shadow-lg shadow-yellow-500/30">
               {product.badge}
             </div>
           )}
@@ -43,13 +43,13 @@ export function ProductCard({ product }: ProductCardProps) {
           {/* Guarantees - Mini Badges */}
           <div className="absolute bottom-3 left-3 flex gap-2">
             {product.guarantees.includes('Garantía 100% Original') && (
-              <div className="bg-primary text-primary-foreground px-2 py-1 rounded text-xs font-semibold flex items-center gap-1">
+              <div className="gradient-gold-shine text-foreground px-2 py-1 rounded text-xs font-semibold flex items-center gap-1 shadow-md shadow-yellow-500/30">
                 <Shield className="h-3 w-3" />
                 Original
               </div>
             )}
             {product.guarantees.some(g => g.includes('Envío')) && (
-              <div className="bg-accent text-accent-foreground px-2 py-1 rounded text-xs font-semibold flex items-center gap-1">
+              <div className="gradient-silver-light text-foreground px-2 py-1 rounded text-xs font-semibold flex items-center gap-1 shadow-md shadow-gray-300/30">
                 <Truck className="h-3 w-3" />
                 Envío
               </div>
@@ -112,7 +112,7 @@ export function ProductCard({ product }: ProductCardProps) {
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}
-            className="w-full bg-accent text-accent-foreground py-3 rounded-lg font-bold hover:opacity-90 transition text-center text-sm"
+            className="w-full gradient-gold-shine text-foreground py-3 rounded-lg font-bold hover:shadow-lg hover:shadow-yellow-500/30 transition text-center text-sm"
           >
             💬 Consultar por WhatsApp
           </a>

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Search, Menu, X, ShoppingBag } from 'lucide-react';
+import Image from 'next/image';
 import { categories } from '@/lib/data';
 
 export function Header() {
@@ -23,12 +24,18 @@ export function Header() {
       <header className="fixed top-7 left-0 right-0 z-40 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0 font-bold text-xl">
+          <Link href="/" className="flex-shrink-0 font-bold text-xl hover:opacity-80 transition">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-bold">
-                E
+              <div className="relative w-10 h-10">
+                <Image
+                  src="/images/uploads/a069893e-38f0-4741-9ee3-f0d0be242825.jpg"
+                  alt="EXPOSTORE"
+                  fill
+                  className="object-contain"
+                  sizes="40px"
+                />
               </div>
-              <span className="hidden sm:inline">EXPOSTORE</span>
+              <span className="hidden sm:inline text-base font-bold">EXPOSTORE</span>
             </div>
           </Link>
 
@@ -63,7 +70,7 @@ export function Header() {
             href="https://wa.me/541234567890?text=Hola%20EXPOSTORE%2C%20consultando%20por%20disponibilidad%20--%20EXPOSTORE"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:flex items-center gap-2 bg-accent text-accent-foreground px-4 py-2 rounded-lg font-semibold text-sm hover:opacity-90 transition"
+            className="hidden sm:flex items-center gap-2 bg-accent text-accent-foreground px-4 py-2 rounded-lg font-semibold text-sm hover:opacity-90 transition shadow-lg shadow-accent/20 hover:shadow-accent/40"
           >
             <span>💬</span>
             WhatsApp
